@@ -1,4 +1,3 @@
-python3 - <<'EOF'
 import json, os
 p = os.path.expanduser('~/.config/Code/User/settings.json')
 os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -16,4 +15,3 @@ d.setdefault('code-runner.executorMap', {}).update({
 d['code-runner.runInTerminal'] = True
 json.dump(d, open(p, 'w'), indent=4)
 print('patched:', p)
-EOF
